@@ -1,14 +1,25 @@
-'use strict';
+(function() {
+	'use strict';
 
-// Declare app level module which depends on views, and components
-angular.module('myApp', [
-  'ngRoute',
-  'myApp.view1',
-  'myApp.view2',
-  'myApp.version'
-]).
-config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-  $locationProvider.hashPrefix('!');
+	/**
+	 * @ngdoc index
+	 * @name app
+	 * @description
+	 * # app
+	 *
+	 * Main modules of the application.
+	 */
 
-  $routeProvider.otherwise({redirectTo: '/view1'});
-}]);
+	angular.module('myapp', [
+		'ngResource',
+		'ngAria',
+		 'ui.bootstrap',
+		 'ngMaterial',
+		'ngMdIcons',
+		'ngTouch',
+		'ui.router',
+		'home',
+		'view3',
+	]);
+
+})();
